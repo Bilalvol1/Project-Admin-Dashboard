@@ -1,6 +1,13 @@
+@font-face {
+    font-family: "kaushan";
+    src: url("fonts/KaushanScript-Regular.woff2") format("woff2"),
+    url("fonts/KaushanScript-Regular.woff") format("woff");
+
+}
 * {
     margin: 0px;
     padding: 0px;
+    font-family: "kaushan";
 }
 
 body {
@@ -80,23 +87,26 @@ button {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-template-rows: 250px;
     grid-auto-rows: 250px;
+    margin: 10px;
 }
 
 .project-cards > div {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     background-color: white;
     border-left: 8px solid rgb(205, 168, 21) ;
     margin: 15px;
     padding: 15px;
-    border-radius: 8px;
-    /* margin-left: 0px */
+    border-radius: 8px; 
     margin-top: 0px
 }
 
 .announcement-cards {
+    display: grid;
     background-color: white;
     border-radius: 8px;
     padding: 25px;
-    display: grid;
+    margin: 10px;
 }
 
 .announcement-cards > div {
@@ -111,10 +121,14 @@ button {
 .trending-cards {
     background-color: white;
     border-radius: 8px;
+    margin: 10px
 }
 .trending-cards > div {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
     font-size: 22px;
-    padding: 15px;
+    padding: 24px;
 }
 
 .header > div:first-child {
@@ -146,4 +160,12 @@ button {
     align-items: center;
     grid-template-columns: 1fr 5fr;
     margin: 30px 0px 30px 20px;
+}
+
+.project-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    grid-row: 4 / 5;
+    justify-self: end;
 }
